@@ -1,5 +1,5 @@
 set nocompatible
-source $VIMRUNTIME/vimrc_example.vim
+"source $VIMRUNTIME/vimrc_example.vim
 
 set diffexpr=MyDiff()
 function! MyDiff()
@@ -52,6 +52,7 @@ colorscheme monokai
 set t_Co=256  " vim-monokai now only support 256 colours in terminal.
 set ignorecase
 set smartcase
+set hlsearch
 autocmd! GUIEnter * set noerrorbells
 nnoremap <Leader>b :ls<CR>:b
 autocmd! BufRead * set hidden
