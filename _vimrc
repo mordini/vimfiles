@@ -1,6 +1,11 @@
 set nocompatible
 "source $VIMRUNTIME/vimrc_example.vim
 
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+
 set diffexpr=MyDiff()
 function! MyDiff()
   let opt = '-a --binary '
