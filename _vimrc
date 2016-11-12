@@ -1,10 +1,12 @@
 set nocompatible
 "source $VIMRUNTIME/vimrc_example.vim
 
-set guioptions-=M  "remove menu bar
+set guioptions-=m  "remove menu bar
+set guioptions-=M  "don't load menu script
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
+
 
 set diffexpr=MyDiff()
 function! MyDiff()
