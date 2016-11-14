@@ -67,6 +67,8 @@ autocmd! BufRead * set hidden
 autocmd! BufRead *.rep set ft=xml
 set tabstop=2
 nnoremap <leader><leader> <c-^>
+
+" Dragvisuals Plugin Begin
 vmap  <expr>  <LEFT>   DVB_Drag('left')
 vmap  <expr>  <RIGHT>  DVB_Drag('right')
 vmap  <expr>  <DOWN>   DVB_Drag('down')
@@ -74,6 +76,8 @@ vmap  <expr>  <UP>     DVB_Drag('up')
 vmap  <expr>  D        DVB_Duplicate()
 "##     " Remove any introduced trailing whitespace after moving...     ##
 let g:DVB_TrimWS = 1
+" end Dragvisuals Plugin
+
 set directory=~/vimfiles/swapfiles
 set backupdir=~/vimfiles/backups
 set undodir=~/vimfiles/undofiles
