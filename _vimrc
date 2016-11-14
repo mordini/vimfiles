@@ -60,6 +60,7 @@ set t_Co=256  " vim-monokai now only support 256 colours in terminal.
 set ignorecase
 set smartcase
 set hlsearch
+set incsearch
 autocmd! GUIEnter * set noerrorbells
 nnoremap <Leader>b :ls<CR>:b
 autocmd! BufRead * set hidden
