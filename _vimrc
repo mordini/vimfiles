@@ -90,4 +90,4 @@ set path+=**
 set wildmenu
 
 " map running python scripts to F5
-au FileType python map <F5> :!clear && python %<CR>
+au FileType python exec 'map <F5> :!clear && python %<CR><CR>'
