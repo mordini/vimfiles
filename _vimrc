@@ -88,3 +88,6 @@ set path+=**
 
 " Display all matching files when we tab complete
 set wildmenu
+
+" map running python scripts to F5
+au FileType python map <F5> :!clear && python %<CR>
