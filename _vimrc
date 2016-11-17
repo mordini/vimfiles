@@ -90,4 +90,9 @@ set path+=**
 set wildmenu
 
 " map running python scripts to F5
-au FileType python exec 'map <F5> :!clear && python %<CR><CR>'
+" experimenting with different settings
+" section to be cleared with just one, or possibly with if statement per OS
+"au FileType python map <silent> <F5> :!clear && python %<CR><CR>
+"au FileType python exec 'map <F5> :!clear && python %<CR><CR>'
+au FileType python exec 'map <F5> :read !python %<CR><CR>'
+"au FileType python map <F5> :!python %<CR>
