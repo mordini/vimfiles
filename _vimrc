@@ -100,7 +100,13 @@ set wildmenu
 " testing these
 " first two to put into buffer
 " second two to merely echo the output
-" au WinEnter *.py exec 'map <silent> <F5> :0read !python %<CR><CR>'
-" au BufWinEnter *.py exec 'map <silent> <F5> :0read !python %<CR><CR>'
-au WinEnter *.py exec 'map <silent> <F5> :echo system("python ".expand("%"))<CR>'
-au BufWinEnter *.py exec 'map <silent> <F5> :echo system("python ".expand("%"))<CR>'
+"au! WinEnter *.py exec 'map <F5> new | 0read !python '.expand('#:p').'<CR><CR>'
+au! BufWinEnter *.py map <F5> :call RunPython()<CR>
+au! WinEnter *.py map <F5> :call RunPython()<CR>
+"au WinEnter *.py exec 'map <silent> <F5> :echo system("python ".expand("%"))<CR>'
+"au BufWinEnter *.py exec 'map <silent> <F5> :echo system("python ".expand("%"))<CR>'
+
+function! RunPython()
+				new
+				0read !python #:p
+endfun
