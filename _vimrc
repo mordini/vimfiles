@@ -94,5 +94,7 @@ set wildmenu
 " section to be cleared with just one, or possibly with if statement per OS
 "au FileType python map <silent> <F5> :!clear && python %<CR><CR>
 "au FileType python exec 'map <F5> :!clear && python %<CR><CR>'
-au FileType python exec 'map <F5> :read !python %<CR><CR>'
+au WinEnter *.py exec 'map <silent> <F5> :0read !python %<CR><CR>'
+au BufWinEnter *.py exec 'map <silent> <F5> :0read !python %<CR><CR>'
+" au FileType python exec 'map <F5> :0read !start python %<CR><CR>'
 "au FileType python map <F5> :!python %<CR>
