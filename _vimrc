@@ -109,4 +109,5 @@ au! WinEnter *.py map <F5> :call RunPython()<CR>
 function! RunPython()
 				new
 				0read !python #:p
+				wincmd j 
 endfun
