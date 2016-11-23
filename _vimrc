@@ -111,3 +111,7 @@ function! RunPython()
 				0read !python #:p
 				wincmd j 
 endfun
+
+function! ChangeCoords()
+				s/\vy\=\"\d.{-}\"/
+endfun
