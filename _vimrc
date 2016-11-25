@@ -1,5 +1,5 @@
 set nocompatible
-"source $VIMRUNTIME/vimrc_example.vim
+source ~/vimfiles/functions.vim
 
 set guioptions-=m  "remove menu bar
 set guioptions-=M  "don't load menu script
@@ -105,13 +105,3 @@ au! BufWinEnter *.py map <F5> :call RunPython()<CR>
 au! WinEnter *.py map <F5> :call RunPython()<CR>
 "au WinEnter *.py exec 'map <silent> <F5> :echo system("python ".expand("%"))<CR>'
 "au BufWinEnter *.py exec 'map <silent> <F5> :echo system("python ".expand("%"))<CR>'
-
-function! RunPython()
-				new
-				0read !python #:p
-				wincmd j 
-endfun
-
-function! ChangeCoords()
-				s/\vy\=\"\d.{-}\"/
-endfun
