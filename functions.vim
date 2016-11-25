@@ -13,15 +13,18 @@ endfun
 
 " Add amount to numbers
 let g:S = 0 "result in global variable S
-function! Sum(number)
-				let g:S = g:S + a:number
-				return a:number
+function! Sum(number, incAmount)
+				let g:S = ''
+				let g:S = a:number + a:incAmount
+				echo g:S
+				return g:S
 endfunction
 
 " Subtract amount to numbers
 let g:S = 0 "result in global variable S
-function! Sub(number)
-				let g:S = g:S - a:number
-				return a:number
+function! Sub(number, decAmount)
+				let g:S = ''
+				let g:S = a:number - a:decAmount
+				echo g:S
+				return g:S
 endfunction
-
