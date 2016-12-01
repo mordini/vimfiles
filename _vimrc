@@ -69,6 +69,7 @@ autocmd! BufRead * set hidden
 autocmd! BufRead *.rep set ft=xml
 set tabstop=2
 nnoremap <leader><leader> <c-^>
+nnoremap <silent> <Leader>, :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 " Dragvisuals Plugin Begin
 vmap  <expr>  <LEFT>   DVB_Drag('left')
