@@ -51,7 +51,6 @@ Plug 'gavinbeatty/dragvisuals.vim'
 Plug 'datawraith/auto_mkdir'
 Plug 'godlygeek/tabular'
 " Plug 'tpope/vim-surround'
-Plug 'godlygeek/tabular'
 call plug#end()
 filetype on
 
