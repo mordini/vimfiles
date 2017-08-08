@@ -50,6 +50,7 @@ Plug 'airblade/vim-rooter'
 Plug 'gavinbeatty/dragvisuals.vim'
 Plug 'datawraith/auto_mkdir'
 " Plug 'tpope/vim-surround'
+Plug 'godlygeek/tabular'
 call plug#end()
 filetype on
 
@@ -66,6 +67,9 @@ nnoremap <Leader>b :ls<CR>:b
 autocmd! BufRead * set hidden
 autocmd! BufRead *.rep set ft=xml
 set tabstop=2
+set shiftwidth=2
+set smarttab
+set expandtab
 nnoremap <leader><leader> <c-^>
 
 " Dragvisuals Plugin Begin
