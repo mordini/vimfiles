@@ -49,6 +49,7 @@ Plug 'crusoexia/vim-monokai'
 Plug 'airblade/vim-rooter'
 Plug 'gavinbeatty/dragvisuals.vim'
 Plug 'datawraith/auto_mkdir'
+Plug 'godlygeek/tabular'
 " Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 call plug#end()
@@ -64,6 +65,8 @@ set hlsearch
 set incsearch
 autocmd! GUIEnter * set noerrorbells
 nnoremap <Leader>b :ls<CR>:b
+nnoremap <Leader>] gg=G``:retab!<CR>
+nnoremap <CR> G
 autocmd! BufRead * set hidden
 autocmd! BufRead *.rep set ft=xml
 set tabstop=2
@@ -71,6 +74,7 @@ set shiftwidth=2
 set smarttab
 set expandtab
 nnoremap <leader><leader> <c-^>
+nnoremap <silent> <Leader>, :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 " Dragvisuals Plugin Begin
 vmap  <expr>  <LEFT>   DVB_Drag('left')
