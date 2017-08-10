@@ -62,6 +62,7 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
+set showcmd
 autocmd! GUIEnter * set noerrorbells
 nnoremap <Leader>b :ls<CR>:b
 nnoremap <Leader>d :%d<CR>
