@@ -64,6 +64,7 @@ set hlsearch
 set incsearch
 autocmd! GUIEnter * set noerrorbells
 nnoremap <Leader>b :ls<CR>:b
+nnoremap <Leader>d :%d<CR>
 nnoremap <Leader>] gg=G``:retab!<CR>
 nnoremap <CR> G
 autocmd! BufRead * set hidden
