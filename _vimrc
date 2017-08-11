@@ -1,3 +1,4 @@
+"added test
 set nocompatible
 source ~/vimfiles/functions.vim
 
