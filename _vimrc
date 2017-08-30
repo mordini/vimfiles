@@ -50,6 +50,7 @@ Plug 'airblade/vim-rooter'
 Plug 'gavinbeatty/dragvisuals.vim'
 Plug 'datawraith/auto_mkdir'
 Plug 'godlygeek/tabular'
+Plug 'leafgarland/typescript-vim'
 " Plug 'tpope/vim-surround'
 call plug#end()
 filetype on
