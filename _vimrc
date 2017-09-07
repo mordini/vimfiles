@@ -39,8 +39,8 @@ noremap  <Up>    <NOP>
 noremap  <Down>  <NOP>
 noremap  <Left>  <NOP>
 noremap  <Right> <NOP>
-nnoremap : ;
-nnoremap ; :
+" nnoremap : ;
+" nnoremap ; :
 
 " vim-plug begin
 " let g:plug_url_format = 'git@github.com:%s.git'
