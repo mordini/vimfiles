@@ -70,6 +70,7 @@ autocmd! GUIEnter * set noerrorbells
 nnoremap <Leader>b :ls<CR>:b
 nnoremap <Leader>d :%d<CR>
 nnoremap <Leader>y :%y+<CR>
+nnoremap <Leader>w :normal "+yy :command+<CR>
 nnoremap <Leader>] gg=G``:retab!<CR>
 nnoremap <CR> G
 autocmd! BufRead * set hidden
