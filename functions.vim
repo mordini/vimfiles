@@ -5,7 +5,23 @@ function! RunPython()
 				wincmd j 
 endfun
 
-" Change X/Y coordinates mathematically
+"" Change X/Y coordinates mathematically
+function! ChangeCoords2(axis,oper,num)
+				"s/\vy\=\"\d.{-}\"/ "technical debt: make it recognise y= d | y =d | y = d
+        :call FixCoords(a:axis)
+              exe
+                    \'%s/\('.a:axis.'="\)\(\d*\)/\=submatch(1).float2nr(submatch(2)'
+                    \.a:oper.a:num.')/gc'
+endfun
+
+"" Fix Coordinates to not have spaces between Coord, =, ", and NUM
+function! FixCoords(axis)
+        exe ':silent! %s/'.a:axis.'= "\(\d*\)/'.toupper(a:axis).'="\1/g'
+        exe ':silent! %s/'.a:axis.' ="\(\d*\)/'.toupper(a:axis).'="\1/g'
+        exe ':silent! %s/'.a:axis.' = "\(\d*\)/'.toupper(a:axis).'="\1/g'
+endfun
+
+"" Change X/Y coordinates mathematically
 function! ChangeCoords()
 				"s/\vy\=\"\d.{-}\"/ "technical debt: make it recognise y= d | y =d | y = d
 				s/\vy\=\"\d.{-}\"=Sum(submatch(0))/
@@ -28,3 +44,19 @@ function! Sub(number, decAmount)
 				echo g:S
 				return g:S
 endfunction
+
+function! CustomTabularPatterns()
+  if exists('g:tabular_loaded')
+    AddTabularPattern! symbols / :/l0
+    AddTabularPattern! hash /^[^>]*\zs=>/
+    AddTabularPattern! chunks / \S\+/l0
+    AddTabularPattern! assignment / = /l0
+    AddTabularPattern! comma /^[^,]*,/l1
+    AddTabularPattern! colon /:\zs /l0
+    AddTabularPattern! options_hashes /:\w\+ =>/
+  endif
+endfunction
+
+autocmd VimEnter * call CustomTabularPatterns()
+map <Leader>t :Tabularize<space>/
+vmap <Leader>t :Tabularize<space>/
