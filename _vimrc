@@ -39,6 +39,8 @@ noremap  <Up>    <NOP>
 noremap  <Down>  <NOP>
 noremap  <Left>  <NOP>
 noremap  <Right> <NOP>
+" nnoremap : ;
+" nnoremap ; :
 
 " vim-plug begin
 " let g:plug_url_format = 'git@github.com:%s.git'
@@ -50,6 +52,7 @@ Plug 'airblade/vim-rooter'
 Plug 'gavinbeatty/dragvisuals.vim'
 Plug 'datawraith/auto_mkdir'
 Plug 'godlygeek/tabular'
+Plug 'leafgarland/typescript-vim'
 " Plug 'tpope/vim-surround'
 call plug#end()
 filetype on
@@ -67,6 +70,7 @@ autocmd! GUIEnter * set noerrorbells
 nnoremap <Leader>b :ls<CR>:b
 nnoremap <Leader>d :%d<CR>
 nnoremap <Leader>y :%y+<CR>
+nnoremap <Leader>w :normal "+yy :command+<CR>
 nnoremap <Leader>] gg=G``:retab!<CR>
 nnoremap <CR> G
 autocmd! BufRead * set hidden
