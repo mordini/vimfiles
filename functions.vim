@@ -16,12 +16,9 @@ endfun
 
 "" Fix Coordinates to not have spaces between Coord, =, ", and NUM
 function! FixCoords(axis)
-        exe ':silent! %s/'.a:axis.'= "\(\d*\)/'.toupper(a:axis).'="\1/g'
-        exe ':silent! %s/'.a:axis.' ="\(\d*\)/'.toupper(a:axis).'="\1/g'
-        exe ':silent! %s/'.a:axis.' = "\(\d*\)/'.toupper(a:axis).'="\1/g'
+        exe ':silent! %s/'.a:axis.'\s*=\s*"\s*\(\d*\)\s*"/'.toupper(a:axis).'="\1/g'
 endfun
 
-"" Change X/Y coordinates mathematically
 function! ChangeCoords()
 				"s/\vy\=\"\d.{-}\"/ "technical debt: make it recognise y= d | y =d | y = d
 				s/\vy\=\"\d.{-}\"=Sum(submatch(0))/
