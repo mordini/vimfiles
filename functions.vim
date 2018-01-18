@@ -16,7 +16,8 @@ endfun
 
 "" Fix Coordinates to not have spaces between Coord, =, ", and NUM
 function! FixCoords(axis)
-        exe ':silent! %s/'.a:axis.'\s*=\s*"\s*\(\d*\)\s*"/'.toupper(a:axis).'="\1/g'
+        exe ':silent! %s/'.a:axis.'\s*=\s*"\s*\(\d*\)\s*"/'
+              \.toupper(a:axis).'="\1"/g'
 endfun
 
 function! ChangeCoords()
