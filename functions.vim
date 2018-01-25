@@ -1,3 +1,15 @@
+" Add HTML Comments to line
+function! AddHTMLComments()
+  exe 's/^/<!--/'
+  exe 's/$/-->/'
+endfun
+
+" Add HTML Comments to line
+function! DelHTMLComments()
+  exe 's/\S\{4\}//'
+  exe 's/.\{3}$//'
+endfun
+
 " Run Python scripts and put results in new split window
 function! RunPython()
 				new
