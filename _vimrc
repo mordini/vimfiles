@@ -73,6 +73,8 @@ nnoremap <Leader>y :%y+<CR>
 nnoremap <Leader>w :normal "+yy :command+<CR>
 nnoremap <Leader>] gg=G``:retab!<CR>
 nnoremap <CR> G
+nnoremap <silent> <C-k> :call AddHTMLComments()<CR>
+nnoremap <silent> <C-l> :call DelHTMLComments()<CR>
 autocmd! BufRead * set hidden
 autocmd! BufRead *.rep set ft=xml
 set tabstop=2
