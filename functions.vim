@@ -2,12 +2,14 @@
 function! AddHTMLComments()
   exe 's/^/<!--/'
   exe 's/$/-->/'
+  norm j
 endfun
 
 " Add HTML Comments to line
 function! DelHTMLComments()
   exe 's/\S\{4\}//'
   exe 's/.\{3}$//'
+  norm j
 endfun
 
 " Run Python scripts and put results in new split window
