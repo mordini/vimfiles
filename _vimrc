@@ -50,6 +50,7 @@ autocmd! BufEnter * silent! lcd %:p:h
 autocmd! GUIEnter * set noerrorbells
 nnoremap <Leader>b :ls<CR>:b
 nnoremap <Leader>d :%d<CR>
+nnoremap <Leader>c :call LoadMyJavaClass()<CR>
 nnoremap <Leader>j :call RunMyJava()<CR>
 nnoremap <Leader>y :%y+<CR>
 nnoremap <Leader>w :normal "+yy :command+<CR>
