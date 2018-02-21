@@ -1,3 +1,16 @@
+function! LoadMyJavaClass()
+  r$VIMHOME/customsnippets/javaclass.java
+  norm ggddfSdw
+  put=expand('%:t:r')
+  norm d$k$pjddjj
+endfun
+
+function! RunMyJava()
+  silent exec '!javac %'
+  lcd %:p:h
+  exec '!java' expand('%:t:r')
+endfun
+
 " Add HTML Comments to line
 function! AddHTMLComments()
   exe 's/^/<!--/'

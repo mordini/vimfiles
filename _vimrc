@@ -1,6 +1,12 @@
 set nocompatible
 source ~/vimfiles/functions.vim
 
+if has('win32') || has ('win64')
+    let $VIMHOME = $HOME."/vimfiles"
+else
+    let $VIMHOME = $HOME."/.vim"
+endif
+    
 set guioptions-=m  "remove menu bar
 set guioptions-=M  "don't load menu script
 set guioptions-=T  "remove toolbar
@@ -40,9 +46,11 @@ set smartcase
 set hlsearch
 set incsearch
 set showcmd
+autocmd! BufEnter * silent! lcd %:p:h
 autocmd! GUIEnter * set noerrorbells
 nnoremap <Leader>b :ls<CR>:b
 nnoremap <Leader>d :%d<CR>
+nnoremap <Leader>j :call RunMyJava()<CR>
 nnoremap <Leader>y :%y+<CR>
 nnoremap <Leader>w :normal "+yy :command+<CR>
 nnoremap <Leader>] gg=G``:retab!<CR>
