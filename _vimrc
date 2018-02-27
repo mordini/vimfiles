@@ -53,6 +53,7 @@ nnoremap <Leader>d :%d<CR>
 nnoremap <Leader>c :call LoadMyJavaClass()<CR>
 nnoremap <Leader>j :call RunMyJava(0)<CR>
 nnoremap <Leader>je :call RunMyJava(1)<CR>
+nnoremap <Leader>s :call HandleDuplicateLines("show")<CR>
 nnoremap <Leader>y :%y+<CR>
 nnoremap <Leader>w :normal "+yy :command+<CR>
 nnoremap <Leader>] gg=G``:retab!<CR>

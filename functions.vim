@@ -1,3 +1,16 @@
+function! HandleDuplicateLines(action)
+  echom a:action
+  if a:action == "show"
+    echom "hey it was show"
+    call search('/^\(.*\)\n\1$')
+  else
+    echom "wtf i shouldn't be here"
+    "  g/^\(.*\)$\n\1$/d
+    "  "diff method
+    "  ":%s/^\(.*\)\n\1$/\1/
+  endif
+endfun
+
 function! MakeQuery()
   norm "+p
   :%s/\[/varchar\(max\)\='
