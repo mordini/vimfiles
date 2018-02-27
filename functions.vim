@@ -5,7 +5,7 @@ function! LoadMyJavaClass()
   norm d$k$pjddjj
 endfun
 
-function! RunMyJava()
+function! RunMyJava(assert)
   let filename = expand('%:t')
   echom "filename: ".filename
 
@@ -17,7 +17,11 @@ function! RunMyJava()
 
   if !v:shell_error
     echom "Compilation succeeded, running program."
-    exec '!java' expand('%:t:r')
+    if a:assert == 1
+      exec '!java -ea' expand('%:t:r')
+    else 
+      exec '!java' expand('%:t:r')
+    endif
   else
     echom "Compilation failed:"
     echom result
