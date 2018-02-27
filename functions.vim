@@ -1,3 +1,16 @@
+function! MakeQuery()
+  norm "+p
+  :%s/\[/varchar\(max\)\='
+  :%s/\]/'
+  :%s/\:/\@/g
+  :silent %s/'false'/0
+  :silent %s/'true'/1
+  norm {odeclare
+  norm dapggO
+  norm ggPggddvap
+  :'<,'>s/,//
+endfun
+
 function! LoadMyJavaClass()
   r$VIMHOME/customsnippets/javaclass.java
   norm ggddfSdw
