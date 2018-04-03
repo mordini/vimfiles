@@ -39,8 +39,8 @@ filetype on
 
 set guifont=Consolas
 syntax on
-colorscheme monokai
 set t_Co=256  " vim-monokai now only support 256 colours in terminal.
+colorscheme monokai
 set ignorecase
 set smartcase
 set hlsearch
