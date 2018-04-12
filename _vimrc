@@ -21,6 +21,9 @@ noremap  <Down>  <NOP>
 noremap  <Left>  <NOP>
 noremap  <Right> <NOP>
 
+" add matchit
+packadd! matchit
+
 " vim-plug begin
 " let g:plug_url_format = 'git@github.com:%s.git'
 filetype off
