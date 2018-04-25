@@ -36,6 +36,7 @@ Plug 'datawraith/auto_mkdir'
 Plug 'godlygeek/tabular'
 Plug 'leafgarland/typescript-vim'
 Plug 'vim-scripts/visSum.vim'
+Plug 'tpope/vim-fugitive'
 " Plug 'tpope/vim-surround'
 call plug#end()
 filetype on
