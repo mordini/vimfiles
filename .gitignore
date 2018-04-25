@@ -3,3 +3,6 @@
 \#*\#
 *.old
 bundle/
+backups/
+swapfiles/
+undofiles/
