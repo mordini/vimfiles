@@ -21,6 +21,9 @@ noremap  <Down>  <NOP>
 noremap  <Left>  <NOP>
 noremap  <Right> <NOP>
 
+" add matchit
+packadd! matchit
+
 " vim-plug begin
 " let g:plug_url_format = 'git@github.com:%s.git'
 filetype off
@@ -34,6 +37,7 @@ Plug 'godlygeek/tabular'
 Plug 'leafgarland/typescript-vim'
 Plug 'vim-scripts/visSum.vim'
 Plug 'dracula/vim'
+Plug 'tpope/vim-fugitive'
 " Plug 'tpope/vim-surround'
 call plug#end()
 filetype on
