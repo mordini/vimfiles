@@ -33,6 +33,7 @@ Plug 'datawraith/auto_mkdir'
 Plug 'godlygeek/tabular'
 Plug 'leafgarland/typescript-vim'
 Plug 'vim-scripts/visSum.vim'
+Plug 'dracula/vim'
 " Plug 'tpope/vim-surround'
 call plug#end()
 filetype on
@@ -62,6 +63,7 @@ nnoremap <silent> <C-k> :call AddHTMLComments()<CR>
 nnoremap <silent> <C-l> :call DelHTMLComments()<CR>
 autocmd! BufRead * set hidden
 autocmd! BufRead *.rep set ft=xml
+:command! -nargs=* -complete=shellcmd R new | setlocal buftype=nofile bufhidden=hide noswapfile | r !<args>
 set tabstop=2
 set shiftwidth=2
 set smarttab
