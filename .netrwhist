@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='C:/mtstingray_cca'
 let g:netrw_dirhist_2='C:/mtstingray_cca/stingrayrules'
 let g:netrw_dirhist_3='C:/mtstingray_cca'
 let g:netrw_dirhist_4='C:/mtstingray_cca/sqlscripts'
+let g:netrw_dirhist_5='/home/paul/java/excel/autolog/io/mordini/mylogger'
