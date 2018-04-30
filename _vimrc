@@ -12,6 +12,7 @@ set guioptions-=M  "don't load menu script
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
+set number "show line numbers
 
 inoremap <Down>  <NOP>
 inoremap <Left>  <NOP>
