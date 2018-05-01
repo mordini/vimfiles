@@ -1,10 +1,10 @@
 Personal VIM Configuration
 
-When first run, run
+To use in *nix
+Hint: run the below line by putting the cursor on it, then in vim :.w !bash
 
+ln -s ~/vimfiles ~/.vim && echo "source ~/vimfiles/_vimrc" > ~/.vimrc
+
+When first run, run
 :PluginClean
 :PluginInstall
-
-To use in *nix, add a symlink to .vim
-
-ln -s vimfiles .vim
