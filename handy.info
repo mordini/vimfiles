@@ -1,0 +1,9 @@
+/*
+Description:
+This file contains handy patterns that should be preserved and studied.
+*/
+
+Vim search for a pattern and if occurs delete to end of line
+1.  :%s/{pattern}.*//
+2.  :g/{pattern}/normal nd$
+3.  :g/{pattern}/normal D
