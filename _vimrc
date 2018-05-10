@@ -95,6 +95,7 @@ set undodir=~/vimfiles/undofiles
 set path+=**
 
 " Display all matching files when we tab complete
+set wildmode=longest,list,full
 set wildmenu
 
 " map running python scripts to F5
