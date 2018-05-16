@@ -54,6 +54,11 @@ set incsearch
 set showcmd
 autocmd! BufEnter * silent! lcd %:p:h
 autocmd! GUIEnter * set noerrorbells
+
+" circular windows navigation
+nnoremap <Tab>   <c-W>w
+nnoremap <S-Tab> <c-W>W
+
 nnoremap <Leader>b :ls<CR>:b
 nnoremap <Leader>d :%d<CR>
 nnoremap <Leader>c :call LoadMyJavaClass()<CR>
@@ -66,6 +71,7 @@ nnoremap <Leader>] gg=G``:retab!<CR>
 nnoremap <CR> G
 nnoremap <silent> <C-k> :call AddHTMLComments()<CR>
 nnoremap <silent> <C-l> :call DelHTMLComments()<CR>
+
 autocmd! BufRead * set hidden
 autocmd! BufRead *.rep set ft=xml
 :command! -nargs=* -complete=shellcmd R new | setlocal buftype=nofile bufhidden=hide noswapfile | r !<args>
