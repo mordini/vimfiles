@@ -55,10 +55,6 @@ set showcmd
 autocmd! BufEnter * silent! lcd %:p:h
 autocmd! GUIEnter * set noerrorbells
 
-" circular windows navigation
-nnoremap <Tab>   <c-W>w
-nnoremap <S-Tab> <c-W>W
-
 nnoremap <Leader>b :ls<CR>:b
 nnoremap <Leader>d :%d<CR>
 nnoremap <Leader>c :call LoadMyJavaClass()<CR>
