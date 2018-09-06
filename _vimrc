@@ -39,6 +39,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'vim-scripts/visSum.vim'
 Plug 'dracula/vim'
 Plug 'tpope/vim-fugitive'
+Plug 'Townk/vim-autoclose'
+Plug 'vim-scripts/closetag.vim'
 " Plug 'tpope/vim-surround'
 call plug#end()
 filetype on
