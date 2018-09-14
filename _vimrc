@@ -102,6 +102,9 @@ set undodir=~/vimfiles/undofiles
 " Provides tab-completion for all file-related tasks
 " set path+=**
 
+" Automatically change to relative dir
+set autochdir
+
 " Display all matching files when we tab complete
 set wildmode=longest,list,full
 set wildmenu
