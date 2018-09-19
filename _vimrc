@@ -1,5 +1,6 @@
 set nocompatible
 source ~/vimfiles/functions.vim
+"source ~/vimfiles/options.vim
 
 if has('win32') || has ('win64')
     let $VIMHOME = $HOME."/vimfiles"
@@ -32,7 +33,7 @@ call plug#begin('~/vimfiles/bundle')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'crusoexia/vim-monokai'
 Plug 'airblade/vim-rooter'
-Plug 'gavinbeatty/dragvisuals.vim'
+" Plug 'gavinbeatty/dragvisuals.vim'
 Plug 'datawraith/auto_mkdir'
 Plug 'godlygeek/tabular'
 Plug 'leafgarland/typescript-vim'
@@ -42,6 +43,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'Townk/vim-autoclose'
 " Plug 'vim-scripts/closetag.vim'
 " Plug 'tpope/vim-surround'
+Plug 'alvan/vim-closetag'
 call plug#end()
 filetype on
 
