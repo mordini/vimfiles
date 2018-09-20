@@ -75,7 +75,7 @@ nnoremap <Leader>] gg=G``:retab!<CR>
 nnoremap <CR> G
 nnoremap <silent> <C-k> :call AddHTMLComments()<CR>
 nnoremap <silent> <C-l> :call DelHTMLComments()<CR>
-nnoremap <silent> <C-[> :%!tidy -q -i --show-errors 0 --show-body-only 1<CR>
+"nnoremap <silent> <C-[> :%!tidy -q -i --show-errors 0 --show-body-only 1<CR>
 
 autocmd! BufRead * set hidden
 autocmd! BufRead *.rep set ft=xml
