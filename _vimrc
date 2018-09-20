@@ -7,7 +7,7 @@ if has('win32') || has ('win64')
 else
     let $VIMHOME = $HOME."/.vim"
 endif
-    
+
 set guioptions-=m  "remove menu bar
 set guioptions-=M  "don't load menu script
 set guioptions-=T  "remove toolbar
@@ -75,6 +75,7 @@ nnoremap <Leader>] gg=G``:retab!<CR>
 nnoremap <CR> G
 nnoremap <silent> <C-k> :call AddHTMLComments()<CR>
 nnoremap <silent> <C-l> :call DelHTMLComments()<CR>
+nnoremap <silent> <C-[> :%!tidy -q -i --show-errors 0 --show-body-only 1<CR>
 
 autocmd! BufRead * set hidden
 autocmd! BufRead *.rep set ft=xml
