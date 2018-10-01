@@ -42,7 +42,8 @@ Plug 'dracula/vim'
 Plug 'tpope/vim-fugitive'
 Plug 'Townk/vim-autoclose'
 " Plug 'vim-scripts/closetag.vim'
-" Plug 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 Plug 'alvan/vim-closetag'
 call plug#end()
 filetype on
