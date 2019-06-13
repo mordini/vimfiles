@@ -90,10 +90,10 @@ nnoremap <leader><leader> <c-^>
 nnoremap <silent> <Leader>, :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 " Add XML Folding
-augroup XML
-    autocmd!
-    autocmd FileType xml setlocal foldmethod=indent foldlevelstart=999 foldminlines=0
-augroup END
+"augroup XML
+"    autocmd!
+"    autocmd FileType xml setlocal foldmethod=indent foldlevelstart=999 foldminlines=0
+"augroup END
 
 " Dragvisuals Plugin Begin
 vmap  <expr>  <LEFT>   DVB_Drag('left')
