@@ -74,10 +74,13 @@ nnoremap <Leader>s :call HandleDuplicateLines("show")<CR>
 nnoremap <Leader>y :%y+<CR>
 nnoremap <Leader>w :normal "+yy :command+<CR>
 nnoremap <Leader>] gg=G``:retab!<CR>
-nnoremap <CR> G
 nnoremap <silent> <C-k> :call AddHTMLComments()<CR>
 nnoremap <silent> <C-l> :call DelHTMLComments()<CR>
 "nnoremap <silent> <C-[> :%!tidy -q -i --show-errors 0 --show-body-only 1<CR>
+
+" insert newline without being in insert mode
+nmap <S-Enter> O<Esc>j
+nmap <CR> o<Esc>k
 
 autocmd! BufRead * set hidden
 autocmd! BufRead *.rep set ft=xml
